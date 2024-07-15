@@ -96,13 +96,7 @@ function SpandanaAdmin() {
     AOS.init();
   }, []);
 
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    yearOfStudy: "",
-    branch: "",
-    password: "",
-  });
+
 
 
   return (
