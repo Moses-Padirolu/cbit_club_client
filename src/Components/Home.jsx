@@ -64,7 +64,7 @@ function Home() {
         <div className=" container g-5">
           <div className="row">
             <div className="col-12 text-center pb-5">
-              <h1 className="text-dark"></h1>
+              
             </div>
             <div className="col">
               <div className="row g-3">
