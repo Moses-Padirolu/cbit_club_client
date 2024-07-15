@@ -148,6 +148,7 @@ function SpandanaAdmin() {
                       className="mt-3 img-fluid "
                       src="https://media.licdn.com/dms/image/D5603AQHzqzFBrgEjKg/profile-displayphoto-shrink_800_800/0/1676305938174?e=1726704000&v=beta&t=zCws-MfpxiB4skO9RUmTog5Pl-uNRraJosxJw9fyKTw" height={'50%'}
                       style={{ borderRadius: "50%" }}
+                      alt="https://static-00.iconduck.com/assets.00/person-icon-476x512-hr6biidg.png"
                     />
                   </div>
 

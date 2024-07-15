@@ -130,6 +130,7 @@ function Spandana() {
                       className="rounded shadow img-fluid "
                       src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS--HRoEU7uBxDFwfcCRCNY7rU8E8XBM9CrvA&usqp=CAU"
                       width={"100%"}
+                      alt="https://static-00.iconduck.com/assets.00/person-icon-476x512-hr6biidg.png"
                     />
                   </div>
                 </div>

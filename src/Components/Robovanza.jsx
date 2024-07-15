@@ -135,6 +135,7 @@ function Robovanza() {
                       <img
                         className="rounded shadow mt-3 img-fluid "
                         src="https://static.vecteezy.com/system/resources/previews/008/215/184/original/robot-logo-design-with-dark-background-abstract-cyborg-human-symbol-for-brand-technology-illustration-vector.jpg"
+                        alt="https://static-00.iconduck.com/assets.00/person-icon-476x512-hr6biidg.png"
                       />
                     </div>
                   </div>

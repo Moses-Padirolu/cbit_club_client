@@ -3,7 +3,6 @@ import { useEffect } from "react";
 import Navbar from "./Navbar";
 import "aos/dist/aos.css";
 import AOS from "aos";
-import Homecolor from "./Homecolor.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faTwitter,
@@ -41,7 +40,7 @@ function Home() {
                 discover the myriad possibilities that await you.
               </p>
               <NavLink to='clubs'>
-              <button type="button" class="btn btn-outline-warning btn-lg">
+              <button type="button" className="btn btn-outline-warning btn-lg">
                 Enrollment
               </button>
               </NavLink>
@@ -52,7 +51,7 @@ function Home() {
                 width="400px"
                 height="300px"
                 src="https://www.shutterstock.com/image-vector/student-club-abstract-concept-vector-260nw-2177600269.jpg"
-                alt=""
+                alt="https://static-00.iconduck.com/assets.00/person-icon-476x512-hr6biidg.png"
                 data-aos="zoom-in"
                 data-aos-duration="3000"
               />
@@ -72,6 +71,7 @@ function Home() {
                 <div className="rounded col-6 d-flex align-items-center justify-content-center">
                   <img
                     src="http://bemac.org.au/wp-content/uploads/2013/07/cultureclub_logo_inline_web.jpg"
+                    alt="https://static-00.iconduck.com/assets.00/person-icon-476x512-hr6biidg.png"
                     height="400px"
                     width="400px"
                     data-aos="fade-right"
@@ -90,17 +90,17 @@ function Home() {
                     showcase their creativity and contribute to the rich
                     cultural fabric of CBIT.
                   </small>
-                  <ul class="list-group py-2">
-                    <li class="listcomponent list-group-item py-2 mb-2 border border-dark">
+                  <ul className="list-group py-2">
+                    <li className="listcomponent list-group-item py-2 mb-2 border border-dark">
                       chaitanya vaadya
                     </li>
-                    <li class="listcomponent list-group-item py-2 mb-2 border border-dark">
+                    <li className="listcomponent list-group-item py-2 mb-2 border border-dark">
                       chaitanya geethi
                     </li>
-                    <li class="listcomponent list-group-item py-2 mb-2 border border-dark">
+                    <li className="listcomponent list-group-item py-2 mb-2 border border-dark">
                       cbit mun
                     </li>
-                    <li class="listcomponent list-group-item py-2 mb-2 border border-dark">
+                    <li className="listcomponent list-group-item py-2 mb-2 border border-dark">
                       communicando
                     </li>
                   </ul>
@@ -118,17 +118,17 @@ function Home() {
                     collaborative projects, preparing them for excellence in the
                     ever-evolving realm of technology.
                   </small>
-                  <ul class="list-group py-2">
-                    <li class="listcomponent list-group-item py-2 mb-2 border border-dark">
-                      chaitanya vaadya{" "}
+                  <ul className="list-group py-2">
+                    <li className="listcomponent list-group-item py-2 mb-2 border border-dark">
+                      chaitanya vaadya
                     </li>
-                    <li class="listcomponent list-group-item py-2 mb-2 border border-dark">
+                    <li className="listcomponent list-group-item py-2 mb-2 border border-dark">
                       chaitanya geethi
                     </li>
-                    <li class=" listcomponent list-group-item py-2 mb-2 border border-dark">
+                    <li className=" listcomponent list-group-item py-2 mb-2 border border-dark">
                       cbit mun
                     </li>
-                    <li class="listcomponent list-group-item py-2 mb-2 border border-dark">
+                    <li className="listcomponent list-group-item py-2 mb-2 border border-dark">
                       communicando
                     </li>
                   </ul>
@@ -136,6 +136,7 @@ function Home() {
                 <div className="rounded col-6 d-flex align-items-center justify-content-center">
                   <img
                     src="https://www.bhprsd.org/cms/lib/NJ01001930/Centricity/Domain/894/tech%20club.jpg"
+                    alt="https://static-00.iconduck.com/assets.00/person-icon-476x512-hr6biidg.png"
                     height="400px"
                     width="400px"
                     data-aos="fade-left"
