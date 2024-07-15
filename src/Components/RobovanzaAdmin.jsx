@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useLocation } from "react";
-import { useLocation } from "react-router-dom";
 import axios from "axios";
 import "aos/dist/aos.css";
 import AOS from "aos";
