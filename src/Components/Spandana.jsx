@@ -17,14 +17,14 @@ function Spandana() {
 
   useEffect(() => {
     axios
-      .get(`${process.env.REACT_APP_SERVER_URL}/getHackathon`)
+      .get(`${process.env.REACT_APP_SERVER_URL || "http://cbit-clubs-server.onrender.com"}/getHackathon`)
       .then((result) => {
         setHackathon(result.data);
       })
       .catch((err) => console.log(err));
 
     axios
-      .get(`${process.env.REACT_APP_SERVER_URL}/getClubMembers`)
+      .get(`${process.env.REACT_APP_SERVER_URL || "http://cbit-clubs-server.onrender.com"}/getClubMembers`)
       .then((result) => setClubMembers(result.data))
       .catch((err) => console.log(err));
 
@@ -35,7 +35,7 @@ function Spandana() {
     e.preventDefault();
 
     axios
-      .post(`${process.env.REACT_APP_SERVER_URL}/clubRegistration`, {
+      .post(`${process.env.REACT_APP_SERVER_URL || "http://cbit-clubs-server.onrender.com"}/clubRegistration`, {
         club: "Spandana",
         name: name,
         roll: roll,
@@ -52,7 +52,7 @@ function Spandana() {
     e.preventDefault();
 
     axios
-      .post(`${process.env.REACT_APP_SERVER_URL}/hackathonAppliation`, {
+      .post(`${process.env.REACT_APP_SERVER_URL || "http://cbit-clubs-server.onrender.com"}/hackathonAppliation`, {
         club: "Spandana",
         name: name,
         roll: roll,
@@ -64,13 +64,13 @@ function Spandana() {
       .catch((err) => console.log(err));
 
     axios
-      .get(`${process.env.REACT_APP_SERVER_URL}/getOneHackathon/${id}`)
+      .get(`${process.env.REACT_APP_SERVER_URL || "http://cbit-clubs-server.onrender.com"}/getOneHackathon/${id}`)
       .then((result) => {
         const newCount = result.data.participants;
         const updatedCount = newCount + 1;
 
         axios
-          .put(`${process.env.REACT_APP_SERVER_URL}/updateParticipants/${id}`, {
+          .put(`${process.env.REACT_APP_SERVER_URL || "http://cbit-clubs-server.onrender.com"}/updateParticipants/${id}`, {
             participants: updatedCount,
           })
           .then((res2) => console.log("bye", res2))
