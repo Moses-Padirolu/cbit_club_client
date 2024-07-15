@@ -57,7 +57,7 @@ function CNavbar() {
           
           // Move the logic that depends on value inside this block
           console.log(value);
-          if (value == 1) {
+          if (value === 1) {
             navigate("../robovanzaadmin", {
               state: {
                 name,

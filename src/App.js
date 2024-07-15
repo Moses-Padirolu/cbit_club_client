@@ -7,7 +7,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'aos/dist/aos.css'; 
 import Robovanza from './Components/Robovanza';
 import Spandana from './Components/Spandana';
-import AOS from 'aos';
 import UpdateEvent from './Components/UpdateEvent';
 import RobovanzaAdmin from './Components/RobovanzaAdmin';
 import SpandanaAdmin from './Components/SpandanaAdmin';

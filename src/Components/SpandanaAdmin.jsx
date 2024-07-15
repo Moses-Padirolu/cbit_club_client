@@ -20,7 +20,7 @@ function SpandanaAdmin() {
   const handleCreate = (e) => {
     e.preventDefault(); 
     axios
-      .post(`${process.env.SERVER_URL}/createHackthon`, {
+      .post(`${process.env.REACT_APP_SERVER_URL}/createHackathon`, {
         club: clubName,
         name: eventName,
         date: eventDate,
@@ -33,10 +33,10 @@ function SpandanaAdmin() {
 
   const handleAcceptApplication = (id) => {
     axios
-      .get(`${process.env.SERVER_URL}/getApplication/${id}`)
+      .get(`${process.env.REACT_APP_SERVER_URL}/getApplication/${id}`)
       .then((result) => {
         axios
-          .post(`${process.env.SERVER_URL}/createMember`, {
+          .post(`${process.env.REACT_APP_SERVER_URL}/createMember`, {
             club: clubName,
             name: result.data.name,
             roll: result.data.roll,
@@ -51,42 +51,43 @@ function SpandanaAdmin() {
       .catch((err) => console.log(err));
 
     axios
-      .delete(`${process.env.SERVER_URL}/deleteApplication/${id}`)
+      .delete(`${process.env.REACT_APP_SERVER_URL}/deleteApplication/${id}`)
       .then((res) => console.log("deleted"))
       .catch((err) => console.log(err));
   };
 
   const handleDelete = (id) => {
     axios
-      .delete(`${process.env.SERVER_URL}/deleteHackathon/${id}`)
+      .delete(`${process.env.REACT_APP_SERVER_URL}/deleteHackathon/${id}`)
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
   };
 
   const handleDeleteApplication = (id) => {
     axios
-      .delete(`${process.env.SERVER_URL}/deleteApplication/${id}`)
+      .delete(`${process.env.REACT_APP_SERVER_URL}/deleteApplication/${id}`)
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
   };
 
   useEffect(() => {
     axios
-      .get(`${process.env.SERVER_URL}/getHackthon`)
+      .get(`${process.env.REACT_APP_SERVER_URL}/getHackathon`)
       .then((result) => {
+        console.log("getting hackathon")
         setData(result.data);
       })
       .catch((err) => console.log(err));
 
     axios
-      .get(`${process.env.SERVER_URL}/getClubRegistration`)
+      .get(`${process.env.REACT_APP_SERVER_URL}/getClubRegistration`)
       .then((result) => {
         setClubApplication(result.data);
       })
       .catch((err) => console.log(err));
 
     axios
-      .get(`${process.env.SERVER_URL}/getClubMembers`)
+      .get(`${process.env.REACT_APP_SERVER_URL}/getClubMembers`)
       .then((result) => setClubMembers(result.data))
       .catch((err) => console.log(err));
   });

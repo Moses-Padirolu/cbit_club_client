@@ -15,16 +15,18 @@ function Robovanza() {
   const [hackathon, setHackathon] = useState([]);
   const [clubmembers, setClubMembers] = useState();
 
+  console.log("process fileee",process.env.REACT_APP_SERVER_URL);
+
   useEffect(() => {
     axios
-      .get(`${process.env.SERVER_URL}/getHackathon`)
+      .get(`${process.env.REACT_APP_SERVER_URL}/getHackathon`)
       .then((result) => {
         setHackathon(result.data);
       })
       .catch((err) => console.log(err));
 
     axios
-      .get(`${process.env.SERVER_URL}/getClubMembers`)
+      .get(`${process.env.REACT_APP_SERVER_URL}/getClubMembers`)
       .then((result) => setClubMembers(result.data))
       .catch((err) => console.log(err));
 
@@ -35,7 +37,7 @@ function Robovanza() {
     e.preventDefault();
 
     axios
-      .post(`${process.env.SERVER_URL}/clubRegistration`, {
+      .post(`${process.env.REACT_APP_SERVER_URL}/clubRegistration`, {
         club: "Robovanza",
         name: name,
         roll: roll,
@@ -53,7 +55,7 @@ function Robovanza() {
     e.preventDefault();
 
     axios
-      .post(`${process.env.SERVER_URL}/hackathonAppliation`, {
+      .post(`${process.env.REACT_APP_SERVER_URL}/hackathonAppliation`, {
         club: "Robovanza",
         name: name,
         roll: roll,
@@ -65,13 +67,13 @@ function Robovanza() {
       .catch((err) => console.log(err));
 
     axios
-      .get(`${process.env.SERVER_URL}/getOneHackathon/${id}`)
+      .get(`${process.evn.REACT_APP_SERVER_URL}/getOneHackathon/${id}`)
       .then((result) => {
         const newCount = result.data.participants;
         const updatedCount = newCount + 1;
 
         axios
-          .put(`${process.env.SERVER_URL}/updateParticipants/${id}`, {
+          .put(`${process.evn.REACT_APP_SERVER_URL}/updateParticipants/${id}`, {
             participants: updatedCount,
           })
           .then((res2) => console.log("bye", res2))

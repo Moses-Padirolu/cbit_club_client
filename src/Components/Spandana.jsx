@@ -17,14 +17,14 @@ function Spandana() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/getHackathon")
+      .get(`${process.env.REACT_APP_SERVER_URL}/getHackathon`)
       .then((result) => {
         setHackathon(result.data);
       })
       .catch((err) => console.log(err));
 
     axios
-      .get("http://localhost:3001/getClubMembers")
+      .get(`${process.env.REACT_APP_SERVER_URL}/getClubMembers`)
       .then((result) => setClubMembers(result.data))
       .catch((err) => console.log(err));
 
@@ -35,7 +35,7 @@ function Spandana() {
     e.preventDefault();
 
     axios
-      .post("http://localhost:3001/clubRegistration", {
+      .post(`${process.env.REACT_APP_SERVER_URL}/clubRegistration`, {
         club: "Spandana",
         name: name,
         roll: roll,
@@ -52,7 +52,7 @@ function Spandana() {
     e.preventDefault();
 
     axios
-      .post("http://localhost:3001/hackathonApplication", {
+      .post(`${process.env.REACT_APP_SERVER_URL}/hackathonAppliation`, {
         club: "Spandana",
         name: name,
         roll: roll,
@@ -64,13 +64,13 @@ function Spandana() {
       .catch((err) => console.log(err));
 
     axios
-      .get(`http://localhost:3001/getOneHackathon/${id}`)
+      .get(`${process.env.REACT_APP_SERVER_URL}/getOneHackathon/${id}`)
       .then((result) => {
         const newCount = result.data.participants;
         const updatedCount = newCount + 1;
 
         axios
-          .put(`http://localhost:3001/updateParticipants/${id}`, {
+          .put(`${process.env.REACT_APP_SERVER_URL}/updateParticipants/${id}`, {
             participants: updatedCount,
           })
           .then((res2) => console.log("bye", res2))
