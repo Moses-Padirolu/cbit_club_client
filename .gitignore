@@ -10,21 +10,6 @@
 
 # production
 /build
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Build and test
-        run: |
-          npm install
-          npm run build
-        env:
-          CI: false  # Adjust CI environment variable as needed
-
 
 # misc
 .DS_Store

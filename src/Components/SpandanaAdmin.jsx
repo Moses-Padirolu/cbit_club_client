@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { NavLink, useLocation } from "react-router-dom";
-import { Outlet } from "react-router-dom";
 import axios from "axios";
 import "aos/dist/aos.css";
 import AOS from "aos";
@@ -105,27 +103,6 @@ function SpandanaAdmin() {
     password: "",
   });
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Add your form submission logic here
-    console.log("Form submitted:", formData);
-    // Reset the form after submission if needed
-    setFormData({
-      name: "",
-      email: "",
-      yearOfStudy: "",
-      branch: "",
-      password: "",
-    });
-  };
 
   return (
     <>
@@ -212,6 +189,7 @@ function SpandanaAdmin() {
                               <img
                                 className="rounded shadow mt-3 img-fluid "
                                 src="https://static.vecteezy.com/system/resources/previews/008/215/184/original/robot-logo-design-with-dark-background-abstract-cyborg-human-symbol-for-brand-technology-illustration-vector.jpg"
+                                alt="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOuxrvcNMfGLh73uKP1QqYpKoCB0JLXiBMvA&s"
                               />
                             </div>
                           </div>

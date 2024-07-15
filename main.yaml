@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies and build
+        run: |
+          npm install
+          npm run build
+        env:
+          CI: false  # Adjust CI environment variable as needed
+
+      - name: Archive production build
+        uses: actions/upload-artifact@v2
+        with:
+          name: build
+          path: build
